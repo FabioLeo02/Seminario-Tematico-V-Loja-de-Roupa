@@ -1,0 +1,84 @@
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  
+  button {
+    position: absolute;
+    left: 570px;
+    top: 86px;
+  }
+    
+  .botao-cadastro {
+    background-color: rgb(5, 141, 5);
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .botao-cadastro:hover {
+    background-color:  rgb(6, 190, 6);
+  }
+  
+    .card { /*Conteiner*/
+      background-color: #8485a9;
+      color: #ffffff;
+      border: 2px solid #555555;
+      border-radius: 5px;
+      padding: 20px;
+      width: 675px; /*Aumentar largura do conteiner*/
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 5px;
+      position: relative; 
+      right: 4px;
+    }
+  
+    .table a{
+      color: black;
+    }
+    
+    
+    th, td {
+      padding: 15px 15px 15px 17px;
+      width: 1px;
+      text-align: center;
+    }
+    
+    th {
+      background-color: #373a79;
+      color: #ffffff;
+      
+    }
+    
+    td {
+      background-color: #eeeeee;
+      color: black;
+    }
+    
+    tr:nth-child(even) td {
+      background-color: #dddddd;
+    }

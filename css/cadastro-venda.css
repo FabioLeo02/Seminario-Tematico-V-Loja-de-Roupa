@@ -1,0 +1,114 @@
+.card {
+    background-color: #8485a9;
+    color: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    padding: 20px;
+    width: 830px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+    .content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    }
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    }
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.cliente{
+    position: flex;
+    top: 30px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    width: 30%;
+}
+
+.roupa{
+    position: absolute;
+    top: 137px; /* mover horizontamente*/
+    left: 290px; /* mover vertifcalmente*/
+    width: 40.8%;
+}
+
+.forma-pagamento{
+    position: flex;
+    top: 30px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    width: 40%;
+}
+
+.quantidade{
+    position: absolute;
+    top: 137.40px; /* mover horizontamente*/
+    left: 660px; /* mover vertifcalmente*/
+    width: 103px;
+}
+
+.valor-unidade{
+    position: absolute;
+    top: 217px; /* mover horizontamente*/
+    left: 370px; /* mover vertifcalmente*/
+    width: 20%;
+}
+
+.valor-total{
+    position: absolute;
+    top: 217px; /* mover horizontamente*/
+    left: 558px; /* mover vertifcalmente*/
+    width: 23.5%;
+}
+
+select,
+input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #273c75;
+    padding: 10px 20px;
+    position: relative;
+    left: 640px;
+}
+
+.button input[type="submit"] {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+    .button:hover {
+    background-color: #4562a8;
+    }

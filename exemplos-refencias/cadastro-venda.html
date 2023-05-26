@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
+    <style>
+    .card {
+    background-color: #8485a9;
+    color: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+    .content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 70px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body>
+
+     <input type="checkbox" id="menu">
+
+    <nav>
+        <label for="menu" class="menu-bar">
+
+            <i class="fa fa-bars"></i>
+
+        </label>
+    
+        <a href="homepage.php"></a><label>Vitrine System</label>   
+        
+    </nav>
+
+    <div class="side-menu">
+
+        <center>
+            <img src="images/bluepen.jpg">
+            <br><br>
+
+            <h2>Nome</h2>
+        </center>
+        <br>
+
+        <a href="#"><i class="fa fa-usd" aria-hidden="true"></i><span>Vendas</span></a>
+        <a href="#"><i class="fas fa-tshirt" aria-hidden="true"></i><span>Roupas</span></a>
+        <a href="clientespage.php"><i class="fa fa-users" aria-hidden="true"></i><span>Clientes</span></a>
+        <a href="#"><i class="fa fa-truck" aria-hidden="true"></i><span>Fornecedores</span></a>
+        <a href="#"><i class="fa fa-industry" aria-hidden="true"></i><span>Marcas</span></a>
+        <a href="#"><i class="fa fa-id-badge" aria-hidden="true"></i><span>Usuarios</span></a>
+        <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i><span>Movimentações</span></a>
+        <a href="#"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Logout</span></a>   
+    </div>
+
+    <div class="content">
+		<section>
+			<div class="container">
+                <div class="card">
+				    <h2>Cadastro de Vendas</h2>
+                    <br>
+                    <p>Cliente</p>
+                    <input type="text">
+                    <br>
+                    <p>Forma de pagamento</p>
+                    <input type="text">
+                    <br>
+                    <p>Quantidade</p>
+                    <input type="text">
+                    <br>
+                    <p>Valor da Unidade</p>
+                    <input type="text">
+                    <br>
+                    <p>Valor Total</p>
+                    <input type="text">
+                    <br>
+                    <button>Finalizar Venda</button>
+
+                </div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

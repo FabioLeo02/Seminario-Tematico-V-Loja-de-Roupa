@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard da Loja de Roupas</title>
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      </head>
+<body>
+    <input type="checkbox" id="menu">
+
+    <nav>
+        <label for="menu" class="menu-bar">
+
+            <i class="fa fa-bars"></i>
+
+        </label>
+    
+        <label>Vitrine System</label>   
+        
+    </nav>
+
+    
+
+    <div class="side-menu">
+
+        <center>
+            <img src="data:image/jpeg;base64,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">
+            <br><br>
+
+            <h2>Nome</h2>
+        </center>
+        <br>
+
+        <a href="#"><i class="fa fa-user"></i><span>Menu 1</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Menu 2</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Menu 3</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Menu 4</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Menu 5</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Menu 6</span></a>
+        <a href="#"><i class="fa fa-user"></i><span>Logout</span></a>
+
+    </div>
+
+    <div class="dashboard">
+        <div class="main-content">
+          <div class="container vendas">
+            <h2>Vendas</h2>
+            <div id="vendasChartContainer" class="chart-container">
+                <canvas id="vendasChart"></canvas>
+            </div>      
+          </div>
+      
+          <div class="container produtos">
+            <h2>Produtos</h2>
+            <div id="produtosChartContainer" class="chart-container">
+                <canvas id="produtosChart"></canvas>
+            </div>
+            <!-- Conteúdo relacionado a produtos -->
+          </div>
+      
+          <div class="container clientes">
+            <h2>Clientes</h2>
+            <div id="clientesChartContainer" class="chart-container">
+                <canvas id="clientesChart"></canvas>
+            </div>
+            <!-- Conteúdo relacionado a clientes -->
+          </div>
+        </div>
+      </div>
+      
+<script>
+    // Dados fictícios de vendas
+    const vendasData = {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+      datasets: [{
+        label: 'Vendas',
+        data: [1000, 1200, 800, 1500, 1100],
+        backgroundColor: '#ffcdd2',
+        borderColor: '#ff6384',
+        borderWidth: 1
+      }]
+    };
+  
+    // Dados fictícios de produtos
+    const produtosData = {
+      labels: ['Camiseta', 'Calça Jeans', 'Vestido', 'Blusa', 'Casaco'],
+      datasets: [{
+        label: 'Produtos',
+        data: [50, 30, 20, 45, 15],
+        backgroundColor: '#c8e6c9',
+        borderColor: '#43a047',
+        borderWidth: 1
+      }]
+    };
+  
+    // Dados fictícios de clientes
+    const clientesData = {
+      labels: ['Feminino', 'Masculino', 'Infantil'],
+      datasets: [{
+        label: 'Clientes',
+        data: [60, 40, 25],
+        backgroundColor: '#bbdefb',
+        borderColor: '#2196f3',
+        borderWidth: 1
+      }]
+    };
+  
+    // Configurações dos gráficos
+    const chartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      layout: {
+        padding: {
+          left: 10,
+          right: 10,
+          top: 10,
+          bottom: 10
+        }
+      }
+    };
+  
+    // Renderiza os gráficos
+    window.onload = function() {
+      const vendasChart = new Chart(document.getElementById('vendasChart'), {
+        type: 'bar',
+        data: vendasData,
+        options: chartOptions
+      });
+  
+      const produtosChart = new Chart(document.getElementById('produtosChart'), {
+        type: 'bar',
+        data: produtosData,
+        options: chartOptions
+      });
+  
+      const clientesChart = new Chart(document.getElementById('clientesChart'), {
+        type: 'bar',
+        data: clientesData,
+        options: chartOptions
+      });
+    };
+  </script>
+  
+
+</body>
+</html>

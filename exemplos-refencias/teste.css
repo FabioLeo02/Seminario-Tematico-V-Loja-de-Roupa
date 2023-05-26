@@ -1,0 +1,36 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilo do header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: indigo;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo do container principal */
+.container {
+    display: flex;
+    height: 90%;
+}
+
+/* Estilo da sidebar */
+.sidebar {
+    width: 20%;
+    height: 111.1%;
+    background-color: #5f27cd;
+    color: #fff;
+    text-align: center;
+}
+
+/* Estilo da div de conteúdo */

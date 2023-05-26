@@ -1,0 +1,94 @@
+.container {
+    width: calc(45% - 20px); /* Altere a largura conforme necessário */
+    margin-right: 20px; /* Espaçamento entre os contêineres */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: absolute;
+		top: 100px; /* mover horizontamente*/
+		left: 250px; /* mover vertifcalmente*/
+  }
+  
+  .container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .container table th,
+  .container table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .container table th {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Estilos para o gráfico de vendas */
+  #chart {
+    width: 100%;
+    height: 300px;
+  }
+  
+  #vendasChart,
+  #clientesChart,
+  #produtosChart { /* Posição do container do conteudo*/
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* Para o Internet Explorer 8 e versões anteriores */
+    position: absolute;
+  }
+  
+ 
+  #produtosChartContainer { /*Posição do Conteudo em si*/
+    width: 30%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+		top: 100px; /* mover horizontamente*/
+		left: 250px; /* mover vertifcalmente*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #vendasChartContainer {
+    width: 30%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+		top: 275px; /* mover horizontamente*/
+		left: 234px; /* mover vertifcalmente*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #clientesChartContainer{
+    width: 30%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+		top: 450px; /* mover horizontamente*/
+		left: 250px; /* mover vertifcalmente*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .dashboard .main-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
