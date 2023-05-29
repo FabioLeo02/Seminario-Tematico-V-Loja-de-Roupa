@@ -55,12 +55,12 @@ include ("funcoes.php");
 			<div class="container">
                 <div class="card">
                     <h2>Cadastro de Roupas</h2>
-                    <div>
-                        <h3>Nome da Roupa</h3>
+                    <div class="label-1">
+                        <label for="">Nome da Roupa</label>
                         <input type="text">
                     </div>
                     <div>
-                        <h3>Nome do Fornecedor</h3>
+                    <label for="">Nome do Fornecedor</label>
                             <select name="" id="">
                             <option value="0"></option>
                                 <?php
@@ -70,7 +70,7 @@ include ("funcoes.php");
                     </div>
 
                     <div>
-                        <h3>Nome da Marca</h3>
+                    <label for="">Nome da Marca</label>
                             <select name="" id="">
                             <option value="0"></option>
                                 <?php
@@ -80,7 +80,7 @@ include ("funcoes.php");
                     </div>
 
                     <div>
-                        <h3>Categoria de Roupa</h3>
+                    <label for="">Categoria de Roupa</label>
                             <select name="" id="">
                             <option value="0"></option>
                                 <?php
@@ -90,7 +90,8 @@ include ("funcoes.php");
                     </div>
 
                     <div>
-                        <h3>Tamanho</h3>
+                    <label for="">Tamanho</label>
+                        
                             <select name="" id="">
                             <option value="0"></option>
                                 <?php
@@ -100,7 +101,7 @@ include ("funcoes.php");
                     </div>
 
                     <div>
-                        <h3>Publico Alvo</h3>
+                    <label for="">Publico Alvo</label>
                             <select name="" id="">
                             <option value="0"></option>
                                 <?php
@@ -110,7 +111,7 @@ include ("funcoes.php");
                     </div>
                     <br>
                     <div class="button">
-                        <input type="submit" value="Finalizar Venda">
+                        <input type="submit" value="Finalizar Cadastro">
                     </div>
                 </div>
 			</div>
