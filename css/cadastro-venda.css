@@ -4,7 +4,7 @@
     border: 2px solid #555555;
     border-radius: 5px;
     padding: 20px;
-    width: 830px;
+    width: 700px;
     margin: 0 auto;
     margin-top: 50px;
     }
@@ -33,53 +33,107 @@ h2 {
     color: white;
     }
 
-h3 {
-    font-size: 18px;
-    font-weight: bold;
+label {
+    font-size: 30px;
     color: white;
 }
 
-.cliente{
-    position: flex;
-    top: 30px; /* mover horizontamente*/
-    left: 220px; /* mover vertifcalmente*/
-    width: 30%;
+form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
 }
 
-.roupa{
-    position: absolute;
-    top: 137px; /* mover horizontamente*/
-    left: 290px; /* mover vertifcalmente*/
-    width: 40.8%;
+label[for="cliente"],
+[for="roupa"],
+[for="quantidade"],
+[for="form-pagamento"],
+[for="valor-unidade"],
+[for="valor-total"]{
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.forma-pagamento{
-    position: flex;
-    top: 30px; /* mover horizontamente*/
-    left: 220px; /* mover vertifcalmente*/
-    width: 40%;
+.label-1{
+    display: flex;
+    flex-direction: row;
 }
 
-.quantidade{
-    position: absolute;
-    top: 137.40px; /* mover horizontamente*/
-    left: 660px; /* mover vertifcalmente*/
-    width: 103px;
+    label[for="cliente"]{
+        margin-left: 1%;
+        margin-bottom: -25px;
+        
+    }
+
+    label[for="roupa"]{
+        margin-left: 70%;
+        margin-bottom: -25px;
+    }
+
+    label[for="quantidade"]{
+        margin-left: 125%;
+        margin-bottom: -25px;
+    }
+
+.input-1{
+    display: flex;
+    flex-direction: row;
 }
 
-.valor-unidade{
-    position: absolute;
-    top: 217px; /* mover horizontamente*/
-    left: 370px; /* mover vertifcalmente*/
-    width: 20%;
+    #env-cliente{
+        width: 35%;
+    }
+
+    #env-roupa{
+        width: 55%;
+        margin-left: 1%;
+    }
+
+    #env-quantidade{
+        width: 20%;
+        margin-left: 1%;
+    }
+
+.label-2{
+    display: flex;
+    flex-direction: row;
 }
 
-.valor-total{
-    position: absolute;
-    top: 217px; /* mover horizontamente*/
-    left: 558px; /* mover vertifcalmente*/
-    width: 23.5%;
+    label[for="form-pagamento"]{
+        margin-left: 1px;
+        margin-bottom: -25px;
+    }
+
+
+    label[for="valor-unidade"]{
+        margin-left: 77px;
+        margin-bottom: -25px;
+    }
+
+    label[for="valor-total"]{
+        margin-left: 75px;
+        margin-bottom: -25px;
+    } 
+
+.input-2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -5px;
 }
+
+    #env-form-pag{
+        width: 250px;
+    }
+
+    #env-valor-unid{
+        width: 200px;
+        margin-left: 1%;
+    }
+
+    #env-valor-total{
+        width: 155px;
+        margin-left: 1%;
+    }
 
 select,
 input[type="text"] {
@@ -97,7 +151,7 @@ input[type="text"] {
     background-color: #273c75;
     padding: 10px 20px;
     position: relative;
-    left: 640px;
+    left: 510px;
 }
 
 .button input[type="submit"] {
