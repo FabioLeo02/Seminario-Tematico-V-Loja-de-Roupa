@@ -11,7 +11,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/cadastro-venda.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-venda.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -51,60 +51,61 @@ include ("funcoes.php");
     </div>
 
     <div class="content">
-		<section>
-			<div class="container">
-                <div class="card">
-				    <h2>Cadastro de Vendas</h2>
-                    <br>
-                    <div class="cliente">
-                        <h3>Cliente</h3>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from clientes","ID_Cliente","Nome","");
-                            ?>
-                        </select>
-                    </div>
-                    <div class="roupa">
-                        <h3>Roupa</h3>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from roupas","ID_Roupa","Nome","");
-                            ?>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="forma-pagamento">
-                        <h3>Forma de pagamento</h3>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from formaspagamento","ID_FormaPagamento","Descricao","");
-                            ?>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="quantidade">
-                        <h3>Quantidade</h3>
-                        <input type="text">
-                    </div>
-                    <div class="valor-unidade">
-                        <h3>Valor da Unidade</h3>
-                        <input type="text">
-                    </div>
-                    <div class="valor-total">
-                        <h3>Valor Total</h3>
-                        <input type="text">
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Finalizar Venda">
-                    </div>
-
+    <section>
+        <div class="container">
+            <div class="card">
+                <h2>Cadastro de Vendas</h2>
+            <form action="">
+                <div class="label-1">
+                    <label for="cliente">Cliente</label>
+                    <label for="roupa">Roupa</label>
+                    <label for="quantidade">Quantidade</label>
                 </div>
-			</div>
-		</section>
-	</div>
+                <div class="input-1">
+                    <select id="env-cliente">
+                        <option value="0"></option>
+                        <?php
+                        criar_options("SELECT * from clientes","ID_Cliente","Nome","");
+                        ?>
+                    </select>
+
+                    <select id="env-roupa">
+                        <option value="0"></option>
+                        <?php
+                        criar_options("SELECT * from roupas","ID_Roupa","Nome","");
+                        ?>
+                    </select>
+
+                    <input type="text" id="env-quantidade">
+                </div>
+
+                <div class="label-2">
+                    <label for="form-pagamento">Forma de pagamento</label>
+                    <label for="valor-unidade">Valor da Unidade</label>
+                    <label for="valor-total">Valor Total</label>
+                </div>
+                <div class="input-2">
+                    <select id="env-form-pag">
+                        <option value="0"></option>
+                        <?php
+                        criar_options("SELECT * from formaspagamento","ID_FormaPagamento","Descricao","");
+                        ?>
+                    </select>
+                    
+                    <input type="text" id="env-valor-unid">
+
+                    <input type="text" id="env-valor-total">
+                </div>
+                </form>
+                <br>
+                <div class="button">
+                    <input type="submit" value="Finalizar Venda">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
 
 </body>
 </html>
