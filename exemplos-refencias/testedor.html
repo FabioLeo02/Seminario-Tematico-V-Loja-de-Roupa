@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário Genérico</title>
+  <style>
+    .form-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .form-container label {
+      font-weight: bold;
+    }
+
+    .form-container .form-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-direction: row;
+    }
+
+    .form-container .form-row label {
+      width: 100px;
+    }
+
+    .form-container input {
+      width: 300px;
+      height: 30px;
+    }
+
+    .form-container-2 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .form-container-2 label {
+      font-weight: bold;
+    }
+
+    .form-container-2 .form-row-2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-direction: row;
+    }
+
+    .form-container-2 .form-row-2 label {
+      width: 100px;
+    }
+
+    .form-container-2 input {
+      width: 300px;
+      height: 30px;
+    }
+
+    .form-container button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-row">
+      <label for="campo1">Campo 1:</label>
+      <input type="text" id="campo1">
+      <label for="campo2">Campo 2:</label>
+      <input type="text" id="campo2">
+      <label for="campo3">Campo 3:</label>
+      <input type="text" id="campo3">
+    </div>
+
+  <div class="form-container-2">
+    <div class="form-row-2">
+        <label for="campo4">Campo 4:</label>
+        <input type="text" id="campo4">
+        <label for="campo5">Campo 5:</label>
+        <input type="text" id="campo5">
+        <label for="campo6">Campo 6:</label>
+        <input type="text" id="campo6">
+    </div>
+</div>
+
+    <button type="submit">Enviar</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+.card {
+    background-color: #8485a9;
+    color: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+    .content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    }
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    }
+
+label {
+    font-size: 30px;
+    color: white;
+}
+
+label[for="marcas"]{
+    font-size: 16px;
+    font-weight: bold; 
+    position: relative;
+    top: 20px;
+    right: 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 90fr 1fr; /*definir colunas*/
+    gap: 5px;
+    margin-top: -30px;
+    
+}
+
+select,
+input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #273c75;
+    padding: 10px 20px;
+    position: relative;
+    left: 210px;
+}
+
+.button input[type="submit"] {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+    .button:hover {
+    background-color: #4562a8;
+    }

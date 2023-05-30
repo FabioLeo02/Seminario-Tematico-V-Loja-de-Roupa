@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Formulário</title>
+  <style>
+    .container {
+  display: flex; /* Exibe os elementos dentro do container como um flex container */
+  flex-direction: column; /* Define a direção dos elementos como uma coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  height: 100vh; /* Define a altura do container para ocupar toda a altura da viewport */
+}
+
+h1 {
+  margin-bottom: 20px; /* Define uma margem inferior de 20 pixels para o elemento h1 */
+}
+
+form {
+  display: flex; /* Exibe os elementos do formulário como um flex container */
+  flex-direction: column; /* Define a direção dos elementos como uma coluna */
+  align-items: flex-start; /* Alinha os elementos à esquerda dentro do container */
+}
+
+.form-c {
+  display: flex; /* Exibe os elementos do grupo do formulário como um flex container */
+  flex-direction: row; /* Define a direção dos elementos como uma coluna */
+  margin-bottom: -5px; /* Define uma margem inferior de 10 pixels para o grupo do formulário */
+}
+
+label[for="email"]{
+  margin-left: 200%;
+}
+
+.form-d {
+  display: flex; /* Exibe os elementos do grupo do formulário como um flex container */
+  flex-direction: row; /* Define a direção dos elementos como uma coluna */
+  margin-bottom: 10px; /* Define uma margem inferior de 10 pixels para o grupo do formulário */
+}
+
+.form-b {
+  display: flex; /* Exibe os elementos do grupo do formulário como um flex container */
+  flex-direction: row; /* Define a direção dos elementos como uma coluna */
+  margin-bottom: -5px; /* Define uma margem inferior de 10 pixels para o grupo do formulário */
+}
+
+label[for="a2"]{
+  margin-left: 170%;
+}
+.form-a {
+  display: flex; /* Exibe os elementos do grupo do formulário como um flex container */
+  flex-direction: row; /* Define a direção dos elementos como uma coluna */
+  margin-bottom: 10px; /* Define uma margem inferior de 10 pixels para o grupo do formulário */
+}
+
+#nome{
+  width: 30%;
+}
+
+#email{
+  width: 30%;
+  margin-left: 29%;
+}
+
+#b1{
+  width: 30%;
+}
+
+#b2{
+  width: 30%;
+  margin-left: 29%;
+}
+
+label {
+  margin-bottom: 5px; /* Define uma margem inferior de 5 pixels para os elementos label */
+}
+
+
+input[type="submit"] {
+  width: 100px; /* Define a largura do botão de envio como 100 pixels */
+  padding: 10px; /* Adiciona um preenchimento interno de 10 pixels ao botão de envio */
+  background-color: #4CAF50; /* Define a cor de fundo do botão de envio como verde */
+  color: white; /* Define a cor do texto do botão de envio como branco */
+  border: none; /* Remove a borda do botão de envio */
+  cursor: pointer; /* Altera o cursor para o formato de ponteiro ao passar o mouse sobre o botão de envio */
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Define a cor de fundo do botão de envio como uma tonalidade mais escura de verde ao passar o mouse sobre ele */
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Contato</h1>
+    <form>
+      <div class="form-c">
+        <label for="nome">Nome:</label>
+        <label for="email">Email:</label>
+      </div>
+      <div class="form-d">
+        <input type="text" id="nome">
+        <input type="text" id="email">
+      </div>
+      <div class="form-b">
+        <label for="a1">Cliente:</label>
+        <label for="a2">Roupa:</label>
+      </div>
+      <div class="form-a">
+        <input type="text" id="b1">
+        <input type="text" id="b2">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Enviar">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

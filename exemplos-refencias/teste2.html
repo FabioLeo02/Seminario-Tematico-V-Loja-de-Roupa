@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu Site</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.sidebar {
+			background-color: indigo;
+			float: left;
+			width: 15%;
+			padding: 10px;
+            padding-bottom: 33.31%;
+		}
+
+		.sidebar a {
+			display: block;
+			margin-bottom: 10px;
+			color: #333;
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+
+		.sidebar a:hover {
+			color: white;
+		}
+
+		.content {
+			margin-left: 220px;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.container {
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			padding: 20px;
+            position: absolute;
+			top: 200px; /* mover horizontamente*/
+			left: 250px; /* mover vertifcalmente*/
+			background-color: #f1f1f1;
+			display: inline-block;
+			text-align: left;
+			margin: 0 auto;
+		}
+
+		canvas {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Header</h1>
+	</header>
+
+	<div class="sidebar">
+		<a href="#"><i class="fas fa-home"></i> Home</a>
+		<a href="#"><i class="fas fa-user"></i> Profile</a>
+		<a href="#"><i class="fas fa-cog"></i> Settings</a>
+		<a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+	</div>
+
+	<div class="content">
+		<section>
+			<div class="container">
+				<h2>Grafico</h2>
+				<canvas id="salesChart"></canvas>
+			</div>
+		</section>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		// Dados do gráfico de vendas
+		var salesData = {
+			labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+			datasets: [{
+				label: 'Vendas',
+				data: [100, 200, 150, 300, 250, 400],
+				backgroundColor: 'rgba(75, 192, 192, 0.2)',
+				borderColor: 'rgba(75, 192, 192, 1)',
+				borderWidth: 1
+			}]
+		};
+
+		// Configurações do gráfico
+		var chartOptions = {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		};
+
+		// Renderizar o gráfico
+		var salesChart = document.getElementById('salesChart').getContext('2d');
+		new Chart(salesChart, {
+			type: 'bar',
+			data: salesData,
+			options: chartOptions
+		});
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

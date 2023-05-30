@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.card {
+    background-color: #8485a9;
+    color: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+    .content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+    }
+
+    .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    }
+
+.grid-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.name {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* .nome-env{
+  grid-column: 1;
+  grid-row: 2;
+} */
+
+#name{
+    grid-column: 1;
+    grid-row: 2;
+    width: 150%;
+}
+
+.email {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#email{
+    grid-column: 2;
+    grid-row: 2;
+    border-right: 50%;
+    width: 150%;
+}
+
+.message {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.message-env{
+  grid-column: 1;
+  grid-row: 6;
+}
+
+select,
+input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+}
+
+.enviar {
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #273c75;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.enviar input[type="submit"] {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.enviar:hover {
+    background-color: #4562a8;
+    }
+
+
+</style>
+</head>
+<body>
+<div class="content">
+	<section>
+	<div class="container">
+        <div class="card">
+            <h2>Cadastro</h2>
+            <form class="grid-form">
+                <label class="nome" for="name">Nome:</label>
+                <input class="nome-env" type="text" id="name" name="name">
+            
+                <label class="email" for="email">E-mail:</label>
+                <input class="email-env" type="text" id="email" name="email">
+            
+                <label class="message" for="message">Mensagem:</label>
+                <input class="message-env" type="text" id="message" name="message"></input>
+            </form>
+            <br>
+            <input class="enviar" type="submit" value="Enviar">
+        </div>
+    </div>
+    </section>
+</div>
+</body>
+</html>
