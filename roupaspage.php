@@ -73,7 +73,7 @@ e se não conseguir , destroi ela e mostra o erro
 		<section>
 		<div class="container">
         <a href='cadastro-roupa.php'><button class="botao-cadastro"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar</button></a>                <div class="card">
-                    <h2>Planilha de Dados</h2>
+                    <h2>Listagem de Roupas</h2>
                     <table class="table">
                         <tr>
                             <th>Ações</th>

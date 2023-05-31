@@ -74,7 +74,7 @@ e se não conseguir , destroi ela e mostra o erro
 		<div class="container">
         <a href='cadastro-clientes.php'><button class="botao-cadastro"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar</button></a>  
                 <div class="card">
-                    <h2>Planilha de Dados</h2>
+                    <h2>Listagem de Clientes</h2>
                     <table class="table">
                         <tr>
                             <th>Ações</th>

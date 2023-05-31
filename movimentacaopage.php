@@ -21,7 +21,7 @@ e se não conseguir , destroi ela e mostra o erro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/movimentacao.css">
+    <link rel="stylesheet" type="text/css" href="Css/movimentacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -73,7 +73,7 @@ e se não conseguir , destroi ela e mostra o erro
 		<section>
 		<div class="container">
                 <div class="card">
-                    <h2>Planilha de Dados</h2>
+                    <h2>Listagem de Movimentação</h2>
                     <table class="table">
                         <tr>
                             <th>Ações</th>

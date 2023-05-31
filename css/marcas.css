@@ -18,7 +18,7 @@
   
   button {
     position: absolute;
-    left: 240px;
+    left: 270px;
     top: 86px;
   }
 
@@ -42,7 +42,7 @@
       border: 2px solid #555555;
       border-radius: 5px;
       padding: 20px;
-      width: 350px; /*Aumentar largura do conteiner*/
+      width: 370px; /*Aumentar largura do conteiner*/
       margin: 0 auto;
       margin-top: 50px;
     }
@@ -65,7 +65,7 @@
       padding: 15px 15px 15px 17px;
       width: 1px;
       text-align: center;
-      padding-left: 60px;
+      padding-left: 70px;
       padding-right: 49px;
     }
     

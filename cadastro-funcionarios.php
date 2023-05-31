@@ -10,7 +10,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cadastro-venda.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-funcionarios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -51,51 +51,43 @@ include ("funcoes.php");
         <section>
             <div class="container">
                 <div class="card">
-                    <label for="">Cadastro de Funcionarios</label>
-                    <br>
+                    <h2>Cadastro de Funcionarios</h2>
                     <form action="">
-                    <div class="cliente">
-                        <label for="">Cliente</label>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from Clientes","ID_Cliente","Nome","");
-                            ?>
-                        </select>
-                    </div>
-                    <div class="roupa">
-                        <label for="">Roupa</label>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from Roupas","ID_Roupa","Nome","");
-                            ?>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="forma-pagamento">
-                        <label for="">Forma de pagamento</label>
-                        <select name="" id="">
-                            <option value="0"></option>
-                            <?php
-                            criar_options("SELECT * from FormasPagamento","ID_FormaPagamento","Descricao","");
-                            ?>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="quantidade">
-                        <label for="">Quantidade</label>
-                        <input type="text">
-                    </div>
-                    <div class="valor-unidade">
-                        <label for="">Valor da Unidade</label>
-                        <input type="text">
-                    </div>
-                    <div class="valor-total">
-                        <label for="">Valor Total</label>
-                        <input type="text">
-                    </div>
+                        <div class="grid">
+                                <div>
+                                    <label for="funcionario">Nome do Funcionario</label>
+                                    <input type="text">
+                                </div>
+
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="text">
+                                </div>
+
+                                <div>
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="grid-2">
+                                <div>
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text">
+                                </div>
+
+                                <div>
+                                    <label for="tipo-usu">Tipo de Usuario</label>
+                                    <select name="" id="">
+                                        <option value="0"></option>
+                                        <?php
+                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","");
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+                    <br>
                     <div class="button">
                         <input type="submit" value="Finalizar Venda">
                     </div>

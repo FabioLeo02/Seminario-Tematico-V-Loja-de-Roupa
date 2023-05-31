@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = "SELECT `ID_Cliente`,`ID_Roupa`,`ID_FormaPagamento`,`Quantidade`,`ValorUnitario`,`ValorTotal`,`DataVenda` FROM `Vendas`";
+$consulta = 'SELECT NomeCliente, NomeRoupa, FormaPagamento, Quantidade, ValorUnitario, ValorTotal, DataVenda FROM ViewVendas';
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -74,13 +74,13 @@ e se não conseguir , destroi ela e mostra o erro
 		<div class="container">
         <a href='cadastro-venda.php'><button class="botao-cadastro"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar</button></a>  
                 <div class="card">
-                    <h2>Planilha de Dados</h2>
+                    <h2>Listagem de Vendas</h2>
                     <table class="table">
                         <tr>
                             
                             <th>Ações</th>
-                            <th>Cliente</th>
-                            <th>Roupa</th>
+                            <th><div class="cliente">Cliente</div></th>
+                            <th><div class="roupa">Roupa</div></th>
                             <th><div class="forma">Forma de pagamento</div></th>
                             <th>Quantidade</th>
                             <th>Valor Unitario</th>
@@ -93,9 +93,9 @@ e se não conseguir , destroi ela e mostra o erro
                             <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
-                            <td><?php echo $dado["ID_Cliente"]; ?></td>
-                            <td><?php echo $dado["ID_Roupa"]; ?></td>
-                            <td><?php echo $dado["ID_FormaPagamento"]; ?></td>
+                            <td><?php echo $dado["NomeCliente"]; ?></td>
+                            <td><?php echo $dado["NomeRoupa"]; ?></td>
+                            <td><?php echo $dado["FormaPagamento"]; ?></td>
                             <td><?php echo $dado["Quantidade"]; ?></td>
                             <td><?php echo $dado["ValorUnitario"]; ?></td>
                             <td><?php echo $dado["ValorTotal"]; ?></td>

@@ -18,7 +18,7 @@
   
   button {
     position: absolute;
-    left: 620px;
+    left: 915px;
     top: 86px;
   }
   
@@ -42,7 +42,7 @@
       border: 2px solid #555555;
       border-radius: 5px;
       padding: 20px;
-      width: 750px; /*Aumentar largura do conteiner*/
+      width: 1015px; /*Aumentar largura do conteiner*/
       margin: 0 auto;
       margin-top: 50px;
     }
@@ -72,6 +72,14 @@
 
     .forma{
       width: 146px;
+    }
+
+    .cliente{
+      width: 160px;
+    }
+
+    .roupa{
+      width: 200px;
     }
 
     th {
