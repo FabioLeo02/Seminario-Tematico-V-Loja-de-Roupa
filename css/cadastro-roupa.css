@@ -41,8 +41,8 @@ label {
 label[for="roupa"],
 [for="fornecedor"],
 [for="marca"],
-[for="categoria-roupa"],
-[for="publico-alvo"],
+[for="categoriaroupa"],
+[for="publicoalvo"],
 [for="tamanho"]{
     font-size: 16px;
     font-weight: bold; 

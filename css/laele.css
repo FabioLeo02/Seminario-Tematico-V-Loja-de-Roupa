@@ -1,0 +1,41 @@
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    border: 2px none;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    top: 50px; /* mover horizontamente*/
+    left: 220px; /* mover vertifcalmente*/
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  button {
+    position: absolute;
+    left: 1080px;
+    top: -30px;
+    /* width: 300%; */
+  }
+  
+  .botao-cadastro {
+    background-color: rgb(59, 59, 150);
+    color: white;
+    padding: 10px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .botao-cadastro:hover {
+    background-color:  rgb(84, 84, 212);
+  }
+  
+    

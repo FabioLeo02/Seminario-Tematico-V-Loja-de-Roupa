@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/laele.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -43,13 +44,34 @@
         <a href="movimentacaopage.php"><i class="fa fa-cubes" aria-hidden="true"></i><span>Movimentações</span></a>
         <a href="loginpage.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Logout</span></a>  
     </div>
-    <div class="content">
+
+    
+
+<div class="content">
 		<section>
-			<div class="container">
-				<h2>Teste</h2>
-			</div>
-		</section>
-	</div>
+		<div class="container">
+                <div class="card">
+                <audio id="myAudio">
+                    <source src="images\Lá ele.mp3" type="audio/mp3">
+                </audio>
+
+                
+                <button class="botao-cadastro" onclick="toggleAudio()"> <i class="fa fa-music" aria-hidden="true"></i></button>
+
+                <script>
+                    var audio = document.getElementById("myAudio");
+                    
+                    function toggleAudio() {
+                        if (audio.paused) {
+                        audio.play();
+                        } else {
+                        audio.pause();
+                        }
+                    }
+                </script>
+        <       </div>
+        </div>
+</div>
 
 </body>
 </html>

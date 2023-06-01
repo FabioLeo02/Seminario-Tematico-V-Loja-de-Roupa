@@ -16,10 +16,9 @@
   margin: 0 auto;
 }
 
-
 button {
   position: absolute;
-  left: 492px;
+  left: 805px;
   top: 86px;
 }
 
@@ -43,7 +42,7 @@ button {
     border: 2px solid #555555;
     border-radius: 5px;
     padding: 20px;
-    width: 595px; /*Aumentar largura do conteiner*/
+    width: 910px; /*Aumentar largura do conteiner*/
     margin: 0 auto;
     margin-top: 50px;
   }
@@ -61,7 +60,18 @@ button {
     color: black;
   }
   
+  .nome{
+    width: 170px;
+  }
   
+  .telefone{
+    width: 110px;
+  }
+
+  .endereco{
+    width: 212px;
+  }
+
   th, td {
     padding: 15px 15px 15px 17px;
     width: 1px;

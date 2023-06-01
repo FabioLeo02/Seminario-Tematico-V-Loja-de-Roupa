@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = "SELECT `ID_Movimentacao`,`ID_Roupa`,`ID_TipoOperacao`,`Quantidade`,`DataMovimentacao` FROM `MovimentacaoEstoque`";
+$consulta = "SELECT `ID_Movimentacao`,`NomeRoupa`,`TpOp`,`Quantidade`,`DataMovimentacao` FROM `ViewMovimentacao`";
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -21,7 +21,7 @@ e se não conseguir , destroi ela e mostra o erro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/movimentacao.css">
+    <link rel="stylesheet" type="text/css" href="css/movimentacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -77,11 +77,11 @@ e se não conseguir , destroi ela e mostra o erro
                     <table class="table">
                         <tr>
                             <th>Ações</th>
-                            <th>ID de Movimentação</th>
-                            <th>ID da Roupa</th>
-                            <th>Tipo de Operação</th>
+                            <th>ID de Movimentação</th> 
+                            <th><div class="roupa">ID da Roupa</div></th> 
+                            <th><div class="operacao">Tipo de Operação</div></th>
                             <th>Quantidade</th>
-                            <th>Data da Movimentação</th>
+                            <th> <div class="data">Data da Movimentação</div></th>
                         </tr>
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
@@ -90,8 +90,8 @@ e se não conseguir , destroi ela e mostra o erro
                             <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                             <td><?php echo $dado["ID_Movimentacao"]; ?></td>
-                            <td><?php echo $dado["ID_Roupa"]; ?></td>
-                            <td><?php echo $dado["ID_TipoOperacao"]; ?></td>
+                            <td><?php echo $dado["NomeRoupa"]; ?></td>
+                            <td><?php echo $dado["TpOp"]; ?></td>
                             <td><?php echo $dado["Quantidade"]; ?></td>
                             <td><?php echo $dado["DataMovimentacao"]; ?></td>
                         </tr>

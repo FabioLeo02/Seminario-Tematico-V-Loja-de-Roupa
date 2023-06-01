@@ -1,6 +1,5 @@
 <?php
 include ("funcoes.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/cadastro-venda.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-venda.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -55,11 +54,11 @@ include ("funcoes.php");
         <div class="container">
             <div class="card">
                 <h2>Cadastro de Vendas</h2>
-            <form action="">
+            <form action="registrar_vendas.php" method="post">
             <div class="grid">
                 <div>
                     <label for="cliente">Cliente</label>
-                    <select id="env-cliente">
+                    <select id="env-cliente" name="cliente">
                         <option value="0"></option>
                         <?php
                         criar_options("SELECT * from Clientes","ID_Cliente","Nome","");
@@ -69,7 +68,7 @@ include ("funcoes.php");
                 </div>
                 <div>
                     <label for="roupa">Roupa</label>
-                    <select id="env-roupa">
+                    <select id="env-roupa" name="roupa">
                         <option value="0"></option>
                         <?php
                         criar_options("SELECT * from Roupas","ID_Roupa","Nome","");
@@ -78,13 +77,13 @@ include ("funcoes.php");
                 </div>
                 <div>
                     <label for="quantidade">Quantidade</label>
-                    <input type="text" id="env-quantidade">
+                    <input type="text" id="env-quantidade" name="quantidade">
                 </div>
             </div>
             <div class="grid-2">
                 <div>
-                    <label for="form-pagamento">Forma de pagamento</label>
-                    <select id="env-form-pag">
+                    <label for="formpagamento">Forma de pagamento</label>
+                    <select id="env-form-pag" name="formpagamento">
                         <option value="0"></option>
                         <?php
                         criar_options("SELECT * from FormasPagamento","ID_FormaPagamento","Descricao","");
@@ -92,20 +91,21 @@ include ("funcoes.php");
                     </select>
                 </div>
                 <div>
-                    <label for="valor-unidade">Valor da Unidade</label>
-                    <input type="text" id="env-valor-unid">
+                    <label for="valorunidade">Valor da Unidade</label>
+                    <input type="text" id="env-valor-unid" name="valorunidade">
                 </div>
                 <div>
-                    <label for="valor-total">Valor Total</label>
-                    <input type="text" id="env-valor-total">
+                    <label for="valortotal">Valor Total</label>
+                    <input type="text" id="env-valor-total" name="valortotal">
                 </div>
 
             </div>
-                </form>
                 <br>
                 <div class="button">
-                    <input type="submit" value="Finalizar Venda">
+                    <input type="submit" value="Finalizar Venda" name="cadastrar">
                 </div>
+                </form>
+                <br>
             </div>
         </div>
     </section>

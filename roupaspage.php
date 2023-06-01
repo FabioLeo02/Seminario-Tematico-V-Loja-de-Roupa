@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = "SELECT `Nome`,`ID_Fornecedor`,`ID_Marca`,`ID_Tamanho`,`ID_Categoria`,`ID_PublicoAlvo` FROM `Roupas`";
+$consulta = "SELECT `Nome`,`NomeFornecedor`,`NomeMarca`,`NomeCategoria`,`TamanhoRoupa`,`PubAlvo` FROM `ViewRoupas`";
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -21,7 +21,7 @@ e se não conseguir , destroi ela e mostra o erro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/roupas.css">
+    <link rel="stylesheet" type="text/css" href="css/roupas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -76,13 +76,13 @@ e se não conseguir , destroi ela e mostra o erro
                     <h2>Listagem de Roupas</h2>
                     <table class="table">
                         <tr>
-                            <th>Ações</th>
-                            <th>Nome</th>
-                            <th>Fornecedor</th>
-                            <th>Marca</th>
+                            <th>Ações</th>  
+                            <th><div class="nome">Nome</div></th>
+                            <th><div class="fornecedor">Fornecedor</div></th>
+                            <th><div class="marca">Marca</div></th>
                             <th>Categoria</th>
                             <th>Tamanho</th>
-                            <th>Publico Alvo do Produto</th>
+                            <th><div class="pub-alvo">Publico Alvo</div></th>
                         </tr>
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
@@ -91,11 +91,11 @@ e se não conseguir , destroi ela e mostra o erro
                             <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                             <td><?php echo $dado["Nome"]; ?></td>
-                            <td><?php echo $dado["ID_Fornecedor"]; ?></td>
-                            <td><?php echo $dado["ID_Marca"]; ?></td>
-                            <td><?php echo $dado["ID_Categoria"]; ?></td>
-                            <td><?php echo $dado["ID_Tamanho"]; ?></td>
-                            <td><?php echo $dado["ID_PublicoAlvo"]; ?></td>
+                            <td><?php echo $dado["NomeFornecedor"]; ?></td>
+                            <td><?php echo $dado["NomeMarca"]; ?></td>
+                            <td><?php echo $dado["NomeCategoria"]; ?></td>
+                            <td><?php echo $dado["TamanhoRoupa"]; ?></td>
+                            <td><?php echo $dado["PubAlvo"]; ?></td>
                         </tr>
                         <?php } ?>
                     </table>

@@ -11,7 +11,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/cadastro-roupa.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-roupa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -55,15 +55,15 @@ include ("funcoes.php");
 			<div class="container">
                 <div class="card">
                     <h2>Cadastro de Roupas</h2>
-                    <form action="">
+                    <form action="registrar_roupas.php" method="post">
                         <div class="grid">
                             <div>
                                 <label for="roupa">Nome da Roupa</label>
-                                    <input type="text" id="env-roupa">
+                                    <input type="text" id="env-roupa" name="roupa">
                             </div>
                             <div>
                                 <label for="fornecedor">Nome do Fornecedor</label>
-                                <select name="" id="env-fornecedor">
+                                <select id="env-fornecedor" name="fornecedor">
                                 <option value="0"></option>
                                     <?php
                                         criar_options("SELECT * from Fornecedores","ID_Fornecedor","Nome","");
@@ -72,7 +72,7 @@ include ("funcoes.php");
                             </div>
                             <div>
                                 <label for="marca">Nome da Marca</label>
-                                <select name="" id="env-marcas">
+                                <select id="env-marcas" name="marca">
                                 <option value="0"></option>
                                     <?php
                                         criar_options("SELECT * from Marcas","ID_Marca","Nome","");
@@ -82,8 +82,8 @@ include ("funcoes.php");
                         </div>
                         <div class="grid-2">    
                             <div>
-                                <label for="categoria-roupa">Categoria de Roupa</label>
-                                <select name="" id="env-cat-roupa">
+                                <label for="categoriaroupa">Categoria de Roupa</label>
+                                <select id="env-cat-roupa" name="categoriaroupa">
                                 <option value="0"></option>
                                     <?php
                                         criar_options("SELECT * from CategoriaRoupas","ID_Categoria","Nome","");
@@ -92,8 +92,8 @@ include ("funcoes.php");
                             </div>
                             
                             <div>
-                                <label for="publico-alvo">Publico Alvo</label>
-                                <select name="" id="env-pub-alvo">
+                                <label for="publicoalvo">Publico Alvo</label>
+                                <select id="env-pub-alvo" name="publicoalvo">
                                     <option value="0"></option>
                                         <?php
                                             criar_options("SELECT * from PublicoAlvo","ID_PublicoAlvo","Nome","");
@@ -102,20 +102,19 @@ include ("funcoes.php");
                             </div>
                             <div>
                                 <label for="tamanho">Tamanho</label>
-                                <select name="" id="env-tamanho">
+                                <select id="env-tamanho" name="tamanho">
                                     <option value="0"></option>
                                         <?php
                                             criar_options("SELECT * from TamanhoRoupas","ID_Tamanho","Nome","");
                                         ?>
                                 </select>
                             </div>
-                                
+                        </div>
+                        <br>
+                        <div class="button">
+                            <input type="submit" value="Finalizar Cadastro" name="cadastrar">
                         </div>
                     </form>
-                    <br>
-                    <div class="button">
-                        <input type="submit" value="Finalizar Cadastro">
-                    </div>
                 </div>
 			</div>
 		</section>

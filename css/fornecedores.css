@@ -19,7 +19,7 @@
   
   button {
     position: absolute;
-    left: 469px;
+    left: 615px;
     top: 86px;
   }
 
@@ -43,7 +43,7 @@
       border: 2px solid #555555;
       border-radius: 5px;
       padding: 20px;
-      width: 570px; /*Aumentar largura do conteiner*/
+      width: 720px; /*Aumentar largura do conteiner*/
       margin: 0 auto;
       margin-top: 50px;
     }
@@ -61,6 +61,14 @@
       color: black;
     }
     
+    .nome{
+      width: 190px;
+    }
+    
+    .telefone{
+      width: 130px;
+    }
+
     
     th, td {
       padding: 15px 15px 15px 17px;

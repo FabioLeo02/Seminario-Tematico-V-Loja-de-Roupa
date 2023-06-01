@@ -42,7 +42,7 @@
       border: 2px solid #555555;
       border-radius: 5px;
       padding: 20px;
-      width: 660px; /*Aumentar largura do conteiner*/
+      width: 1020px; /*Aumentar largura do conteiner*/
       margin: 0 auto;
       margin-top: 50px;
     }
@@ -60,7 +60,18 @@
       color: black;
     }
     
+    .roupa{
+      width: 200px;
+    }
+
+    .operacao{
+      width: 200px;
+    }
     
+    .data{
+      width: 170px;
+    }
+
     th, td {
       padding: 15px 15px 15px 17px;
       width: 1px;

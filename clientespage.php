@@ -21,7 +21,7 @@ e se não conseguir , destroi ela e mostra o erro
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/clientes.css">
+    <link rel="stylesheet" type="text/css" href="Css/clientes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -78,10 +78,10 @@ e se não conseguir , destroi ela e mostra o erro
                     <table class="table">
                         <tr>
                             <th>Ações</th>
-                            <th>Nome</th>
-                            <th>Telefone</th>
+                            <th><div class="nome">Nome</div></th> 
+                            <th> <div class="telefone">Telefone</div></th>
                             <th>Email</th>
-                            <th>Endereço</th>
+                            <th><div class="endereco">Endereço</div></th> 
                         </tr>
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>

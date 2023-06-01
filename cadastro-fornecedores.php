@@ -26,7 +26,8 @@ include ("funcoes.php");
 
         </label>
     
-        <a href="homepage.php"></a><label>Vitrine System</label>   
+        <a href="homepage.php"></a><label>Vitrine System
+        </label>   
         
     </nav>
 
@@ -55,26 +56,26 @@ include ("funcoes.php");
 			<div class="container">
                 <div class="card">
                     <h2>Cadastro de Fornecedores</h2>
-                <form action="">
+                <form action="registrar_fornecedores.php" method="post">
                     <div class="grid">
                         <div>
                             <label for="fornecedor">Nome do Fornecedor</label>
-                            <input type="text">
+                            <input type="text" name="fornecedor">
                         </div>
                         <div>
                             <label for="telefone">Telefone</label>
-                            <input type="text">
+                            <input type="text" name="telefone">
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="text">
+                            <input type="text" name="email">
                         </div>
                     </div>
-                </form>
-                <br>
+                    <br>
                     <div class="button">
-                        <input type="submit" value="Finalizar Cadastro">
+                        <input type="submit" value="Finalizar Cadastro" name="cadastrar">
                     </div>
+                </form>
                 </div>
 			</div>
 		</section>

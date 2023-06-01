@@ -10,7 +10,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/cadastro-marcas.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-marcas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -52,18 +52,18 @@ include ("funcoes.php");
             <div class="container">
                 <div class="card">
                     <h2>Cadastro de Marcas</h2>
-                    <form action="">
+                    <form action="registrar_marcas.php" method="post">
                         <div class="grid">
                             <div>
                                 <label for="marcas">Nome da Marca</label>
-                                <input type="text">
+                                <input type="text" name="marcas">
                             </div>
                         </div>
-                    </form>
-                    <br>
-                    <div class="button">
-                        <input type="submit" value="Finalizar Venda">
+                        <br>
+                        <div class="button">
+                        <input type="submit" value="Finalizar Cadastro" name="cadastrar">
                     </div>
+                    </form>
                 </div>
             </div>
         </section>

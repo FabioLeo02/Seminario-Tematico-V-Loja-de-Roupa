@@ -10,7 +10,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cadastro-funcionarios.css">
+    <link rel="stylesheet" type="text/css" href="Css/cadastro-funcionarios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -52,46 +52,44 @@ include ("funcoes.php");
             <div class="container">
                 <div class="card">
                     <h2>Cadastro de Funcionarios</h2>
-                    <form action="">
+                    <form action="registrar_funcionarios.php" method="post">
                         <div class="grid">
                                 <div>
-                                    <label for="funcionario">Nome do Funcionario</label>
-                                    <input type="text">
+                                    <label for="funcionario">Nome do Cliente</label>
+                                    <input type="text" name="funcionario">
                                 </div>
 
                                 <div>
                                     <label for="email">Email</label>
-                                    <input type="text">
+                                    <input type="text" name="email">
                                 </div>
 
                                 <div>
                                     <label for="telefone">Telefone</label>
-                                    <input type="text">
+                                    <input type="text" name="telefone">
                                 </div>
                             </div>
                             <div class="grid-2">
                                 <div>
                                     <label for="endereco">Endereço</label>
-                                    <input type="text">
+                                    <input type="text" name="endereco">
                                 </div>
 
                                 <div>
                                     <label for="tipo-usu">Tipo de Usuario</label>
-                                    <select name="" id="">
-                                        <option value="0"></option>
+                                    <select name="tipousuario">
+                                        <!-- <option value="0"></option> -->
                                         <?php
-                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","");
+                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","3");
                                         ?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <br>
+                        <br>
                     <div class="button">
-                        <input type="submit" value="Finalizar Venda">
+                        <input type="submit" value="Finalizar Cadastro" name="cadastrar">
                     </div>
-
                 </div>
             </div>
         </section>

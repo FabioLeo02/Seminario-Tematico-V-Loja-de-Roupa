@@ -10,7 +10,7 @@ include ("funcoes.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="Css/cadastro-clientes.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro-clientes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -52,45 +52,45 @@ include ("funcoes.php");
             <div class="container">
                 <div class="card">
                     <h2>Cadastro de Clientes</h2>
-                    <form action="">
+                    <form action="registrar_clientes.php" method="post">
                         <div class="grid">
                                 <div>
                                     <label for="cliente">Nome do Cliente</label>
-                                    <input type="text">
+                                    <input type="text" name="cliente">
                                 </div>
 
                                 <div>
                                     <label for="email">Email</label>
-                                    <input type="text">
+                                    <input type="text" name="email">
                                 </div>
 
                                 <div>
                                     <label for="telefone">Telefone</label>
-                                    <input type="text">
+                                    <input type="text" name="telefone">
                                 </div>
                             </div>
                             <div class="grid-2">
                                 <div>
                                     <label for="endereco">Endereço</label>
-                                    <input type="text">
+                                    <input type="text" name="endereco">
                                 </div>
 
                                 <div>
                                     <label for="tipo-usu">Tipo de Usuario</label>
-                                    <select name="" id="">
-                                        <option value="0"></option>
+                                    <select name="tipousuario">
+                                        <!-- <option value="0"></option> -->
                                         <?php
-                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","");
+                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","2");
                                         ?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                    </form>
                         <br>
                     <div class="button">
-                        <input type="submit" value="Finalizar Venda">
+                        <input type="submit" value="Finalizar Cadastro" name="cadastrar">
                     </div>
+                    </form>
                 </div>
             </div>
         </section>

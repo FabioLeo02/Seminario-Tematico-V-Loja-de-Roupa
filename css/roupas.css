@@ -19,7 +19,7 @@
   
   button {
     position: absolute;
-    left: 570px;
+    left: 913px;
     top: 86px;
   }
     
@@ -43,7 +43,7 @@
       border: 2px solid #555555;
       border-radius: 5px;
       padding: 20px;
-      width: 675px; /*Aumentar largura do conteiner*/
+      width: 1015px; /*Aumentar largura do conteiner*/
       margin: 0 auto;
       margin-top: 50px;
     }
@@ -60,8 +60,23 @@
     .table a{
       color: black;
     }
+
+    .nome{
+      width: 225px;
+    }
     
+    .marca{
+      width: 120px;
+    }
     
+    .fornecedor{
+      width: 120px;
+    }
+
+    .pub-alvo{
+      width: 120px;
+    }
+
     th, td {
       padding: 15px 15px 15px 17px;
       width: 1px;

@@ -47,9 +47,9 @@ form {
 label[for="cliente"],
 [for="roupa"],
 [for="quantidade"],
-[for="form-pagamento"],
-[for="valor-unidade"],
-[for="valor-total"]{
+[for="formpagamento"],
+[for="valorunidade"],
+[for="valortotal"]{
     font-size: 18px;
     font-weight: bold;
     position: relative;
