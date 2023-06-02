@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #bbbdef;
+    overflow: hidden;
+}
+
+nav { /*Logo Vitrine System*/
+    background: #30336b;
+    line-height: 10%;
+    position: flex;
+    width: 100%;
+    border: 1px solid black;
+    border-style: groove;
+}
+
+
+label { /*Header*/
+    line-height: 80px;
+    font-size: 30px;
+    color: white;
+    font-weight: 200;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+
+.container{ /* Posição do container*/
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 90px auto;
+}
+
+.wrapper {
+    width: 100%; /* Alteração: para ocupar a largura total da tela */
+    max-width: 400px;
+    background:white;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: absolute;
+    top: 140px
+}
+
+.wrapper .title{
+    line-height: 80px;
+    background: #30336b;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.wrapper form{
+    padding: 30px 25px 25px 25px;
+}
+
+.wrapper form .row{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.wrapper form .row input{
+    height: 100%;
+    width: 100%;
+    outline: none;  
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+}
+
+form .row input:focus{
+    border-color: #30336b;  
+    box-shadow: inset 0px 0px 2px 2px rgba(78, 32, 163, 0.59);
+}
+
+.wrapper form .row i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    font-size: 18px;
+    background: #30336b;    
+    border: 1px solid black;
+    border-color: #30336b;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper form .pass{
+    margin: -8px 0 20px 0;
+    position: relative;
+    top: 7px;
+}
+
+.wrapper form .pass a{
+    color: #30336b;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+}
+
+.wrapper form .button input{
+    color: white;
+    font-size: 20px;
+    padding-left: 0px;
+    background: #273c75;  
+    border: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+form .button input:hover{
+    background: #5f64d4;
+}
+
+.wrapper form .signup-link{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.wrapper form .signup-link a{
+    color: #30336b;
+    text-decoration: none;
+}
+
+.wrapper form .signup-link a:hover{
+    text-decoration: underline;
+}
+
+/* Regras de mídia para tornar o estilo responsivo */
+
+@media (max-width: 480px) {
+    .container {
+        margin: 100px auto; /* Alteração: ajuste de margem para telas menores */
+    }
+    
+    .wrapper{
+        border-radius: 0; /* Alteração: remoção do arredondamento de borda */
+        }
+        .wrapper .title {
+            font-size: 20px; /* Alteração: redução do tamanho do título */
+        }
+        
+        .wrapper form {
+            padding: 20px; /* Alteração: redução do espaçamento interno */
+        }
+        
+        .wrapper form .row input {
+            padding-left: 50px; /* Alteração: redução do espaçamento interno do input */
+        }
+        
+        .wrapper form .row i {
+            font-size: 16px; /* Alteração: redução do tamanho do ícone */
+        }
+        
+        .wrapper form .pass {
+            margin-bottom: 10px; /* Alteração: redução da margem inferior */
+        }
+        
+        .wrapper form .button input {
+            font-size: 18px; /* Alteração: redução do tamanho da fonte do botão */
+        }
+        
+        .wrapper form .signup-link {
+            margin-top: 15px; /* Alteração: redução da margem superior */
+        }        
+}

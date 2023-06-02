@@ -11,6 +11,17 @@ order by - escolhe de que forma será ordenado as colunas
 $con = $mysqli->query($consulta) or die($mysqli->error); /* tentar fazer a conexão
 e se não conseguir , destroi ela e mostra o erro
 */
+
+include("fazer-login.php");
+
+$nomeUsuario = '';
+
+// Verifica se a variável de sessão 'nome' está definida
+if (isset($_SESSION['nome'])) {
+    $nomeUsuario = $_SESSION['nome'];
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +58,7 @@ e se não conseguir , destroi ela e mostra o erro
             <img src="images/bluepen.jpg">
             <br><br>
 
-            <h2>Nome</h2>
+            <h2><?php echo $nomeUsuario; ?></h2>
         </center>
         <br>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/loginstyle.css">
+    <link rel="stylesheet" href="Css/redefinir-senha.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
 </head>
@@ -16,26 +16,31 @@
 
     <div class="container">
     <div class="wrapper">
-    <div class="title"><span>Bem-vindo(a)</span></div>
-      <form action="fazer-login.php" method="post">
-
+    <div class="title"><span>Recuperar a Senha</span></div>
+        <form action="redefinir-senha.php" method="post">
     <div class="row">
         <i class="fa fa-user"></i>
-        <input type="text" placeholder="Email" name="email" require>
+        <input type="text" placeholder="CPF" name="cpf" require>
     </div>
 
     <div class="row">
         <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Password" name="senha" require>
+        <input type="password" placeholder="Nova Senha" name="novasenha" require>
+    </div>
+
+    <div class="row">
+        <i class="fa fa-user"></i>
+        <input type="password" placeholder="Confirmar Senha" name="confirmasenha" require>
     </div>
 
 
-    <div class="pass"><a href="redefinirpage.php">Esqueceu a Senha?</a></div> 
-      <div class="row button">
-        <input type="submit" value="Login" name="logar">
+    <!-- Botão Login -->
+    <div class="pass"><a href="loginpage.php"> Voltar</a></div> 
+    <div class="row button">
+        <input type="submit" value="Alterar Senha" name="alterar">
     </div>
         <div class="signup-link">Não possui cadastro?<a href="cadastro-usuario.php"> Clique aqui</a></div>
-      </form>
+        </form>
     </div>
 
     </div>

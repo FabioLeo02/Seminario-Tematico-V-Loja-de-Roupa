@@ -1,3 +1,16 @@
+<?php
+
+include("fazer-login.php");
+
+$nomeUsuario = '';
+
+// Verifica se a variável de sessão 'nome' está definida
+if (isset($_SESSION['nome'])) {
+    $nomeUsuario = $_SESSION['nome'];
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,7 +44,7 @@
             <img src="images/bluepen.jpg">
             <br><br>
 
-            <h2>Nome</h2>
+            <h2><?php echo $nomeUsuario; ?></h2>
         </center>
         <br>
 
@@ -69,7 +82,7 @@
                         }
                     }
                 </script>
-        <       </div>
+                </div>
         </div>
 </div>
 
