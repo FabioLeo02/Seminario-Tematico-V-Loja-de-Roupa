@@ -21,7 +21,7 @@ if (isset($_SESSION['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cadastro-clientes.css">
+    <link rel="stylesheet" type="text/css" href="Css/cadastro-clientes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -34,7 +34,7 @@ if (isset($_SESSION['nome'])) {
             <i class="fa fa-bars"></i>
         </label>
 
-        <a href="homepage.php"></a><label>Vitrine System</label>
+        <a href="homepage.php"><label>Vitrine System</label></a>   
         
     </nav>
 
@@ -58,11 +58,25 @@ if (isset($_SESSION['nome'])) {
         <a href="loginpage.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Logout</span></a>
     </div>
 
+    <div class="content2">
+		<section>
+			<div class="container2">     
+			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Vendas <i class="fa fa-arrow-right" aria-hidden="true"></i> Cadastrar Cliente</p>
+			</div>
+		</section>
+	</div>
+
     <div class="content">
         <section>
             <div class="container">
                 <div class="card">
                     <h2>Cadastro de Clientes</h2>
+                    <div class="voltar">
+                    <a href="clientespage.php">
+                        <i class="fas fa-share fa-rotate-180"> </i>
+                        Voltar
+                    </a>
+                    </div>
                     <form action="registrar_clientes.php" method="post">
                         <div class="grid">
                                 <div>
@@ -89,7 +103,6 @@ if (isset($_SESSION['nome'])) {
                                 <div>
                                     <label for="tipo-usu">Tipo de Usuario</label>
                                     <select name="tipousuario">
-                                        <!-- <option value="0"></option> -->
                                         <?php
                                         criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","2");
                                         ?>

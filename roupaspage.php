@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = "SELECT `Nome`,`NomeFornecedor`,`NomeMarca`,`NomeCategoria`,`TamanhoRoupa`,`PubAlvo` FROM `ViewRoupas`";
+$consulta = "SELECT ID_Roupa, Nome, NomeFornecedor, NomeMarca, NomeCategoria, TamanhoRoupa, PubAlvo FROM ViewRoupas";
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -75,7 +75,7 @@ if (isset($_SESSION['nome'])) {
     <div class="content2">
 		<section>
 			<div class="container2">     
-			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></a></i> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Roupas</p>
+			<p><a href="homepage.php"><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Roupas</p>
 			</div>
 		</section>
 	</div>
@@ -98,8 +98,8 @@ if (isset($_SESSION['nome'])) {
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
                             <td>
-                            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="editar-formulario-roupas.php?ID_Roupa=<?php echo $dado['ID_Roupa']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="excluir-roupa.php?ID_Roupa=<?php echo $dado['ID_Roupa']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                             <td><?php echo $dado["Nome"]; ?></td>
                             <td><?php echo $dado["NomeFornecedor"]; ?></td>

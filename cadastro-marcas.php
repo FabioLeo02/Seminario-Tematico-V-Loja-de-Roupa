@@ -34,7 +34,7 @@ if (isset($_SESSION['nome'])) {
             <i class="fa fa-bars"></i>
         </label>
 
-        <a href="homepage.php"></a><label>Vitrine System</label>
+        <a href="homepage.php"><label>Vitrine System</label></a>   
         
     </nav>
 
@@ -58,11 +58,25 @@ if (isset($_SESSION['nome'])) {
         <a href="loginpage.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Logout</span></a>
     </div>
 
+    <div class="content2">
+		<section>
+			<div class="container2">     
+			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Vendas <i class="fa fa-arrow-right" aria-hidden="true"></i> Cadastrar Marca</p>
+			</div>
+		</section>
+	</div>
+
     <div class="content">
         <section>
             <div class="container">
                 <div class="card">
                     <h2>Cadastro de Marcas</h2>
+                    <div class="voltar">
+                    <a href="marcaspage.php">
+                        <i class="fas fa-share fa-rotate-180"> </i>
+                        Voltar
+                    </a>
+                    </div>
                     <form action="registrar_marcas.php" method="post">
                         <div class="grid">
                             <div>

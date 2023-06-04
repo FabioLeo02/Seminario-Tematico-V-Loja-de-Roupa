@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = "SELECT `Nome`,`Telefone`,`Email`,`Endereco` FROM `funcionarios`";
+$consulta = "SELECT ID_Funcionario ,Nome , Telefone , Email , Endereco FROM Funcionarios";
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -97,8 +97,8 @@ if (isset($_SESSION['nome'])) {
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
                             <td>
-                            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="editar-formulario-funcionarios.php?ID_Funcionario=<?php echo $dado['ID_Funcionario']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="excluir-funcionario.php?ID_Funcionario=<?php echo $dado['ID_Funcionario']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                             <td><?php echo $dado["Nome"]; ?></td>
                             <td><?php echo $dado["Telefone"]; ?></td>

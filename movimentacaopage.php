@@ -32,7 +32,7 @@ if (isset($_SESSION['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/movimentacao.css">
+    <link rel="stylesheet" type="text/css" href="Css/movimentacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -87,7 +87,6 @@ if (isset($_SESSION['nome'])) {
                     <h2>Listagem de Movimentação</h2>
                     <table class="table">
                         <tr>
-                            <th>Ações</th>
                             <th>ID de Movimentação</th> 
                             <th><div class="roupa">ID da Roupa</div></th> 
                             <th><div class="operacao">Tipo de Operação</div></th>
@@ -96,10 +95,6 @@ if (isset($_SESSION['nome'])) {
                         </tr>
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
-                            <td>
-                            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
                             <td><?php echo $dado["ID_Movimentacao"]; ?></td>
                             <td><?php echo $dado["NomeRoupa"]; ?></td>
                             <td><?php echo $dado["TpOp"]; ?></td>

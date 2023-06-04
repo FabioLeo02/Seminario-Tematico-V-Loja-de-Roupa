@@ -21,7 +21,7 @@ if (isset($_SESSION['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/cadastro-roupa.css">
+    <link rel="stylesheet" type="text/css" href="Css/cadastro-roupa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -36,7 +36,7 @@ if (isset($_SESSION['nome'])) {
 
         </label>
     
-        <a href="homepage.php"></a><label>Vitrine System</label>   
+        <a href="homepage.php"><label>Vitrine System</label></a>   
         
     </nav>
 
@@ -60,11 +60,25 @@ if (isset($_SESSION['nome'])) {
         <a href="loginpage.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i><span>Logout</span></a>
     </div>
 
+    <div class="content2">
+		<section>
+			<div class="container2">     
+			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Vendas <i class="fa fa-arrow-right" aria-hidden="true"></i> Cadastrar Roupa</p>
+			</div>
+		</section>
+	</div>
+
     <div class="content">
 		<section>
 			<div class="container">
                 <div class="card">
                     <h2>Cadastro de Roupas</h2>
+                    <div class="voltar">
+                    <a href="roupaspage.php">
+                        <i class="fas fa-share fa-rotate-180"> </i>
+                        Voltar
+                    </a>
+                    </div>
                     <form action="registrar_roupas.php" method="post">
                         <div class="grid">
                             <div>

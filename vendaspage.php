@@ -2,7 +2,7 @@
 
 include("conexao.php");
 
-$consulta = 'SELECT NomeCliente, NomeRoupa, FormaPagamento, Quantidade, ValorUnitario, ValorTotal, DataVenda FROM ViewVendas';
+$consulta = 'SELECT ID_Venda, NomeCliente, NomeRoupa, FormaPagamento, Quantidade, ValorUnitario, ValorTotal, DataVenda FROM ViewVendas';
 /* 
 select * from - seleciona todos as colunas da tabela
 order by - escolhe de que forma será ordenado as colunas
@@ -32,7 +32,7 @@ if (isset($_SESSION['nome'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/vendas.css">
+    <link rel="stylesheet" type="text/css" href="Css/vendas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
 </head>
@@ -88,7 +88,6 @@ if (isset($_SESSION['nome'])) {
                     <h2>Listagem de Vendas</h2>
                     <table class="table">
                         <tr>
-                            
                             <th>Ações</th>
                             <th><div class="cliente">Cliente</div></th>
                             <th><div class="roupa">Roupa</div></th>
@@ -101,8 +100,8 @@ if (isset($_SESSION['nome'])) {
                         <?php while($dado = $con->fetch_array()) { ?> 
                         <tr>
                             <td>
-                            <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="editar-formulario-vendas.php?ID_Venda=<?php echo $dado['ID_Venda']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="excluir-venda.php?ID_Venda=<?php echo $dado['ID_Venda']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                             <td><?php echo $dado["NomeCliente"]; ?></td>
                             <td><?php echo $dado["NomeRoupa"]; ?></td>
@@ -110,7 +109,7 @@ if (isset($_SESSION['nome'])) {
                             <td><?php echo $dado["Quantidade"]; ?></td>
                             <td><?php echo $dado["ValorUnitario"]; ?></td>
                             <td><?php echo $dado["ValorTotal"]; ?></td>
-                            <td width="40px"><?php echo $dado["DataVenda"]; ?></td>
+                            <td><?php echo $dado["DataVenda"]; ?></td>
                         </tr>
                         <?php } ?>
                     </table>

@@ -1,17 +1,34 @@
 <?php
 include ("funcoes.php");
-
-include("fazer-login.php");
+include ("fazer-login.php");
 
 $nomeUsuario = '';
 
 // Verifica se a variável de sessão 'nome' está definida
 if (isset($_SESSION['nome'])) {
     $nomeUsuario = $_SESSION['nome'];
-
 }
 
-?>
+include("conexao.php");
+
+// Recupera o ID da venda a partir do parâmetro na URL
+$idFuncionario = $_GET['ID_Funcionario'];
+
+$consulta_funcionario = "SELECT * FROM Funcionarios WHERE ID_Funcionario = '$idFuncionario'";
+$resultado_funcionario = $mysqli->query($consulta_funcionario);
+
+// Verifica se a venda foi encontrada
+if ($resultado_funcionario->num_rows == 1) {
+    $dados_funcionario = $resultado_funcionario->fetch_assoc();
+    $funcionario = $dados_funcionario['ID_Funcionario'];
+    $nome = $dados_funcionario['Nome'];
+    $telefone = $dados_funcionario['Telefone'];
+    $email = $dados_funcionario['Email'];
+    $endereco = $dados_funcionario['Endereco'];
+    $tipo_usuario = $dados_funcionario['ID_TipoUsuario'];
+
+
+    echo'
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,7 +40,7 @@ if (isset($_SESSION['nome'])) {
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro-funcionarios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/f096223740.js' crossorigin='anonymous'></script>
+    <script src="https://kit.fontawesome.com/f096223740.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -44,7 +61,7 @@ if (isset($_SESSION['nome'])) {
             <img src="images/bluepen.jpg">
             <br><br>
 
-            <h2><?php echo $nomeUsuario; ?></h2>
+            <h2>'. $nomeUsuario .' </h2>
         </center>
         <br>
 
@@ -61,63 +78,69 @@ if (isset($_SESSION['nome'])) {
     <div class="content2">
 		<section>
 			<div class="container2">     
-			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Vendas <i class="fa fa-arrow-right" aria-hidden="true"></i> Cadastrar Funcionario</p>
+			<p><a href="homepage.php" ><i class="fa fa-home" aria-hidden="true"></i></a> Home <i class="fa fa-arrow-right" aria-hidden="true"></i> Vendas <i class="fa fa-arrow-right" aria-hidden="true"></i> Editar Funcionarios</p>
 			</div>
 		</section>
 	</div>
 
     <div class="content">
-        <section>
-            <div class="container">
-                <div class="card">
-                    <h2>Cadastro de Funcionarios</h2>
-                    <div class="voltar">
+            <section>
+                <div class="container">
+                    <div class="card">
+                        <h2>Editar Funcionario</h2>
+                        <div class="voltar">
                         <a href="funcionariospage.php">
                             <i class="fas fa-share fa-rotate-180"> </i>
                             Voltar
                         </a>
-                    </div>
-                    <form action="registrar_funcionarios.php" method="post">
-                        <div class="grid">
+                        </div>
+                        <form method="POST" action="atualizar-funcionarios.php">
+                            <input type="hidden" name="id" value="' . $idFuncionario . '">
+                            <div class="grid">
                                 <div>
                                     <label for="funcionario">Nome do Cliente</label>
-                                    <input type="text" name="funcionario">
+                                    <input type="text" name="funcionario" value="'. $nome .'">
                                 </div>
 
                                 <div>
                                     <label for="email">Email</label>
-                                    <input type="text" name="email">
+                                    <input type="text" name="email"  value="'. $email .'">
                                 </div>
 
                                 <div>
                                     <label for="telefone">Telefone</label>
-                                    <input type="text" name="telefone">
+                                    <input type="text" name="telefone"  value="'. $telefone .'">
                                 </div>
                             </div>
                             <div class="grid-2">
                                 <div>
                                     <label for="endereco">Endereço</label>
-                                    <input type="text" name="endereco">
+                                    <input type="text" name="endereco"  value="'. $endereco .'">
                                 </div>
 
                                 <div>
                                     <label for="tipo-usu">Tipo de Usuario</label>
-                                    <select name="tipousuario">
-                                        <?php
-                                        criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","3");
-                                        ?>
+                                    <select name="tipousuario">';
+                                criar_options("SELECT * from TipoUsuario","ID_TipoUsuario","Nome","3");
+                                echo '
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <br>
-                    <div class="button">
-                        <input type="submit" value="Finalizar Cadastro" name="cadastrar">
+                        <div class="button">
+                            <input type="submit" value="Editar Funcionario" name="editar">
+                        </div>
+                    </form>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
 
-</body>
-</html>
+    </body>
+    </html>';
+} else {
+    // Venda não encontrada
+    echo '<script>alert("Funcionario(a) não encontrado(a)!");</script>';
+}
+?>
