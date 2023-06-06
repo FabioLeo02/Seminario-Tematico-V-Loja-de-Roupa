@@ -1,14 +1,12 @@
 <?php
-
 include("conexao.php"); 
 
-if ($_SERVER['alterar'] === 'POST') {
-    
+if (isset($_POST['alterar'])) {
     $cpf = $_POST['cpf'];
     $novasenha = $_POST['novasenha'];
     $confirmarsenha = $_POST['confirmasenha'];
 
-    if ($novasenha === $confirmarsenha) {
+    if ($novasenha == $confirmarsenha) {
         $sql = "SELECT * FROM LoginUsuario WHERE CPF = '$cpf'";
         $result = $mysqli->query($sql);
 

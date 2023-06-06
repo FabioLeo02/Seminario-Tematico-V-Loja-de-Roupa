@@ -13,7 +13,6 @@
         <label>Vitrine System</label>       
     </nav>
 
-
     <div class="container">
     <div class="wrapper">
     <div class="title"><span>Recuperar a Senha</span></div>
@@ -33,8 +32,6 @@
         <input type="password" placeholder="Confirmar Senha" name="confirmasenha" require>
     </div>
 
-
-    <!-- Botão Login -->
     <div class="pass"><a href="loginpage.php"> Voltar</a></div> 
     <div class="row button">
         <input type="submit" value="Alterar Senha" name="alterar">
